@@ -23,8 +23,8 @@ let package = Package(
 
         .binaryTarget(
             name: "Lcms2",
-            url: "https://github.com/mpvkit/lcms2-build/releases/download/2.16.0-xcode26/lcms2.xcframework.zip",
-            checksum: "68faa94ee8f1d58af4c02922a4845f8ac6aaf77f33034f3b4a6a26ecfff14242"
+            url: "https://github.com/mpvkit/lcms2-build/releases/download/2.16.0-xcode/lcms2.xcframework.zip",
+            checksum: "537f563a65be91118d674d48f43c9d46fc459a3a7ecc20bed9af856b64dc4dce"
         ),
         //AUTO_GENERATE_TARGETS_END//
     ]
