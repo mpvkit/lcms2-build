@@ -35,7 +35,7 @@ jobs:
             import re
 
             def parse_version(ver):
-              if '-' in ver or ver == '':
+              if '-' in ver or '_' in ver or ver == '':
                 return 0
               return int(re.sub(r'[^0-9]+', r'', ver))
 
