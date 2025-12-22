@@ -17,7 +17,7 @@ enum Library: String, CaseIterable {
     var version: String {
         switch self {
         case .lcms2:
-            return "lcms2.16"
+            return "lcms2.17"
         }
     }
 
