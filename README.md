@@ -1,6 +1,6 @@
 # lcms2-build
 
-build scripts for [lcms2](https://github.com/haasn/lcms2)
+build scripts for [lcms2](https://github.com/mm2/Little-CMS)
 
 ## Installation
 
