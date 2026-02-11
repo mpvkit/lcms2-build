@@ -1,18 +1,17 @@
 import Foundation
-import Darwin
+import BuildShared
 
 do {
-    let options = try ArgumentOptions.parse(CommandLine.arguments)
-    try Build.performCommand(options)
+    let options = try BuildRunner.performCommand()
 
-    try BuildLittleCms().buildALL()
+    try BuildLittleCms(options: options).buildALL()
 } catch {
     print(error.localizedDescription)
     exit(1)
 }
 
 
-enum Library: String, CaseIterable {
+enum Library: String, CaseIterable, BuildLibrary {
     case lcms2
     var version: String {
         switch self {
@@ -36,8 +35,8 @@ enum Library: String, CaseIterable {
             return  [
                 .target(
                     name: "Lcms2",
-                    url: "https://github.com/mpvkit/lcms2-build/releases/download/\(BaseBuild.options.releaseVersion)/lcms2.xcframework.zip",
-                    checksum: "https://github.com/mpvkit/lcms2-build/releases/download/\(BaseBuild.options.releaseVersion)/lcms2.xcframework.checksum.txt"
+                    url: "https://github.com/mpvkit/lcms2-build/releases/download/\(BuildRunner.options!.releaseVersion)/lcms2.xcframework.zip",
+                    checksum: "https://github.com/mpvkit/lcms2-build/releases/download/\(BuildRunner.options!.releaseVersion)/lcms2.xcframework.checksum.txt"
                 ),
             ]
         }
@@ -47,7 +46,7 @@ enum Library: String, CaseIterable {
 
 
 private class BuildLittleCms: BaseBuild {
-    init() {
-        super.init(library: .lcms2)
+    init(options: ArgumentOptions) {
+        super.init(library: Library.lcms2, options: options)
     }
 }

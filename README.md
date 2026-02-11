@@ -2,6 +2,8 @@
 
 build scripts for [lcms2](https://github.com/mm2/Little-CMS)
 
+> This is a component of the [MPVKit](https://github.com/mpvkit/MPVKit) project.
+
 ## Installation
 
 ### Swift Package Manager
