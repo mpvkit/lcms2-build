@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "lcms2",
-    platforms: [.macOS(.v10_15), .iOS(.v13), .tvOS(.v13)],
+    platforms: [.macOS(.v11), .iOS(.v14), .tvOS(.v14)],
     products: [
         .library(
             name: "lcms2",
@@ -23,8 +23,8 @@ let package = Package(
 
         .binaryTarget(
             name: "Lcms2",
-            url: "https://github.com/mpvkit/lcms2-build/releases/download/2.17.0/lcms2.xcframework.zip",
-            checksum: "dc0dce0606f6ab6841a8ec5a6bd4448e2f3ef00661a050460f806c9393dc6982"
+            url: "https://github.com/mpvkit/lcms2-build/releases/download/2.18.0-alpha/lcms2.xcframework.zip",
+            checksum: "3ec619c7cb57d390026d36beafdbce33b26308ae7353ce5c7785787803fc55af"
         ),
         //AUTO_GENERATE_TARGETS_END//
     ]
