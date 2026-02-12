@@ -7,7 +7,7 @@ on:
 
 jobs:
   check_version:
-    uses: mpvkit/action/.github/workflows/check_version.yml@main
+    uses: mpvkit/BuildShared/.github/workflows/check_version.yml@main
     secrets: inherit
     with:
       repository: 'mm2/Little-CMS'
